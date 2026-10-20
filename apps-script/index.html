@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <base target="_top">
+  <meta charset="UTF-8">
+  <?!= include('styles'); ?>
+</head>
+<body>
+  <main class="app-shell">
+    <section class="visual-panel" aria-label="Ilustrasi armada">
+      <div class="brand">
+        <div class="brand-mark">W</div>
+        <div>
+          <div class="brand-name">Web Monitoring</div>
+          <div class="brand-subtitle">ARMADA MANAGEMENT</div>
+        </div>
+      </div>
+
+      <div class="visual-copy">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> FLEET CONTROL CENTER</span>
+        <h1>Semua armada.<br><span>Satu kendali.</span></h1>
+        <p>Pantau aktivitas armada, kelola operasional, dan jaga perjalanan tetap terkendali dari satu tempat.</p>
+      </div>
+
+      <div class="fleet-art" aria-hidden="true">
+        <div class="sun-glow"></div>
+        <div class="road road-back"></div>
+        <div class="road road-front"></div>
+        <div class="route-line"></div>
+        <div class="truck-shadow"></div>
+        <svg class="truck" viewBox="0 0 540 260" role="img" aria-label="Ilustrasi truk">
+          <defs>
+            <linearGradient id="boxGrad" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#f8fbff"/>
+              <stop offset="100%" stop-color="#dce9f8"/>
+            </linearGradient>
+            <linearGradient id="cabGrad" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#69b7ff"/>
+              <stop offset="100%" stop-color="#2777d9"/>
+            </linearGradient>
+          </defs>
+          <ellipse cx="278" cy="222" rx="216" ry="18" fill="#163b67" opacity=".13"/>
+          <path d="M70 66 Q70 53 83 53 H335 Q349 53 349 67 V179 H70 Z" fill="url(#boxGrad)" stroke="#c2d7ee" stroke-width="2"/>
+          <path d="M91 72 H328 V161 H91 Z" fill="#eaf3fc"/>
+          <path d="M349 109 H409 Q423 109 432 124 L464 165 V190 H349 Z" fill="url(#cabGrad)"/>
+          <path d="M371 122 H402 Q410 122 416 131 L434 155 H371 Z" fill="#dff3ff"/>
+          <path d="M349 109 H390 V177 H349 Z" fill="#438fdf" opacity=".7"/>
+          <path d="M70 179 H464 V197 H70 Z" fill="#2b5685"/>
+          <path d="M70 179 H464 V188 H70 Z" fill="#6a9bcf"/>
+          <rect x="92" y="86" width="211" height="8" rx="4" fill="#c4d9ef"/>
+          <rect x="92" y="103" width="178" height="5" rx="2.5" fill="#d2e2f3"/>
+          <rect x="92" y="116" width="196" height="5" rx="2.5" fill="#d2e2f3"/>
+          <rect x="92" y="129" width="145" height="5" rx="2.5" fill="#d2e2f3"/>
+          <rect x="386" y="167" width="24" height="8" rx="3" fill="#d9f2ff"/>
+          <rect x="438" y="169" width="15" height="8" rx="3" fill="#ffd28c"/>
+          <circle cx="151" cy="196" r="31" fill="#163554"/>
+          <circle cx="151" cy="196" r="17" fill="#d8e6f3"/>
+          <circle cx="151" cy="196" r="7" fill="#8da9c6"/>
+          <circle cx="393" cy="196" r="31" fill="#163554"/>
+          <circle cx="393" cy="196" r="17" fill="#d8e6f3"/>
+          <circle cx="393" cy="196" r="7" fill="#8da9c6"/>
+          <path d="M80 179 L80 158 Q80 153 85 153 H97 V179 Z" fill="#f8fcff"/>
+          <path d="M456 178 H464 V166 H454 Z" fill="#ffc66e"/>
+          <rect x="185" y="146" width="86" height="18" rx="9" fill="#d7e8fa"/>
+          <circle cx="202" cy="155" r="4" fill="#5c9ce2"/>
+          <rect x="214" y="151" width="45" height="7" rx="3.5" fill="#8bb8e9"/>
+        </svg>
+        <div class="floating-card card-status"><span class="status-icon">✓</span><span><strong>Armada terpantau</strong><small>Operasional terkendali</small></span></div>
+        <div class="floating-card card-route"><span class="route-icon">↗</span><span><strong>Monitoring aktif</strong><small>Data terpusat</small></span></div>
+      </div>
+
+      <div class="visual-footer"><span>OPERASIONAL LEBIH TERKENDALI</span><span class="footer-line"></span><span>01 / 03</span></div>
+    </section>
+
+    <section class="login-panel">
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Ganti tema">
+        <span id="themeIcon">☾</span><span id="themeLabel">Dark mode</span>
+      </button>
+
+      <div class="login-card">
+        <div class="mobile-brand">
+          <div class="brand-mark">W</div><span>Web Monitoring Armada</span>
+        </div>
+        <div class="login-heading">
+          <div class="mini-label">SELAMAT DATANG KEMBALI</div>
+          <h2>Masuk ke akun Anda</h2>
+          <p>Masukkan akun untuk melanjutkan ke pusat monitoring armada.</p>
+        </div>
+
+        <form id="loginForm" novalidate>
+          <label for="loginInput">Username atau email</label>
+          <div class="input-wrap">
+            <span class="field-icon" aria-hidden="true">◎</span>
+            <input id="loginInput" name="login" type="text" placeholder="Masukkan username atau email" autocomplete="username" maxlength="254" required>
+          </div>
+
+          <div class="password-label-row">
+            <label for="passwordInput">Password</label>
+          </div>
+          <div class="input-wrap">
+            <span class="field-icon" aria-hidden="true">⌑</span>
+            <input id="passwordInput" name="password" type="password" placeholder="Masukkan password" autocomplete="current-password" maxlength="1024" required>
+            <button id="togglePassword" class="password-toggle" type="button" aria-label="Tampilkan password">Lihat</button>
+          </div>
+
+          <div class="form-options">
+            <label class="remember-option"><input id="rememberInput" type="checkbox"><span class="custom-check"></span><span>Ingat Saya</span></label>
+            <span class="remember-note">Maks. 7 hari</span>
+          </div>
+
+          <div id="message" class="message" role="status" aria-live="polite"></div>
+          <button id="submitButton" class="submit-button" type="submit">
+            <span id="submitText">Masuk</span><span class="button-arrow">→</span>
+          </button>
+        </form>
+
+        <div id="signedInPanel" class="signed-in-panel" hidden>
+          <div class="success-mark">✓</div>
+          <h3>Login berhasil</h3>
+          <p id="welcomeText"></p>
+          <div class="user-meta"><span>ROLE</span><strong id="roleText"></strong></div>
+          <p class="placeholder-note">Tahap ini menyiapkan autentikasi. Halaman dashboard akan dibuat pada tahap berikutnya.</p>
+          <button id="logoutButton" class="secondary-button" type="button">Logout</button>
+        </div>
+
+        <div class="login-footnote"><span class="lock-icon">▣</span> Akses aman untuk pengguna terdaftar</div>
+      </div>
+      <div class="panel-bottom"><span>WEB MONITORING ARMADA</span><span>SECURE ACCESS</span></div>
+    </section>
+  </main>
+
+  <?!= include('scripts'); ?>
+</body>
+</html>
