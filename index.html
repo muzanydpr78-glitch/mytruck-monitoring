@@ -15,9 +15,8 @@
   <footer>Jangan masukkan spreadsheet ID, password, token, API key, atau data operasional ke repository publik.</footer>
   <script src="config.js"></script><script>
     (()=>{const url=(window.WMA_CONFIG&&window.WMA_CONFIG.APP_URL||'').trim();const status=document.getElementById('status');const wrap=document.getElementById('frameWrap');const open=document.getElementById('openApp');
-      if(url && /^https:\/\/script\.google\.com\/macros\/s\/[^\s]+\/exec(?:\?.*)?$/.test(url)){
-        const frame=document.createElement('iframe');frame.src=url;frame.title='Web Monitoring Armada';frame.loading='lazy';frame.referrerPolicy='strict-origin-when-cross-origin';frame.allow='clipboard-read; clipboard-write';wrap.replaceChildren(frame);open.href=url;open.target='_blank';open.rel='noopener';status.textContent='URL deployment tersedia. Jika aplikasi tidak tampil di dalam bingkai, pilih “Buka aplikasi”.';
-      } else {status.textContent='Belum dikonfigurasi: tambahkan URL Web App pada config.js.';open.addEventListener('click',e=>{e.preventDefault();wrap.scrollIntoView({behavior:'smooth'});});}
+      if(url && /^https:\/\/script\.google\.com\/macros\/s\/[^\s]+\/exec(?:\?.*)?$/.test(url))
+      else {status.textContent='Belum dikonfigurasi: tambahkan URL Web App pada config.js.';open.addEventListener('click',e=>{e.preventDefault();wrap.scrollIntoView({behavior:'smooth'});});}
     })();
   </script>
 </body></html>
